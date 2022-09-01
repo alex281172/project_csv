@@ -5,7 +5,7 @@
 Установка и запуск:
 
 Склонировать репозитарий с Github
-https://github.com/alex281172/test.git
+https://github.com/alex281172/project_csv.git
 
 Скопировать в директорую файл test_data.csv. По условиям теста его не должно быть на Github.
 
