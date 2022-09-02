@@ -10,6 +10,7 @@ morph = pymorphy2.MorphAnalyzer()
 csv_main = pd.read_csv("test_data.csv", delimiter=',')
 csv_man = csv_main[csv_main.role.str.contains(pat='manager', case=False)]
 
+
 def lines():
     print('*' * 50)
 
@@ -56,4 +57,3 @@ dup = {x for x in flags if flags.count(x) > 1}
 
 for counter in dup:
     print(f'Диалог {counter} соответствует требованиям')
-
