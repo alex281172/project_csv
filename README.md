@@ -25,7 +25,7 @@ source venv/bin/activate - для Linux
 pip install -r requirements.txt
 
 Запуск
-pasr_txt.py
+pasr_csv.py
 
 NB: во время первого запуска необходимо дополнительно загрузить библиотеки nltk!
 
