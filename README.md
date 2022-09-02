@@ -14,12 +14,13 @@ https://github.com/alex281172/project_csv.git
 
 3. Перейти в директорую проекта  
 
-Создать виртуальное окружение 
-для Windows
+  Создать виртуальное окружение 
+
+  для Windows
 ````
 python -m venv venv
 ````
-для Linux
+  для Linux
 ````
 python3 -m venv venv - для Linux
 ````
@@ -38,6 +39,6 @@ source venv/bin/activate
 pip install -r requirements.txt 
 ````
 ***
-Запуск 
+6. Запуск 
 pars_csv.py 
 ***
