@@ -20,7 +20,7 @@ python -m venv venv
 ````
   для Linux
 ````
-python3 -m venv venv - для Linux
+python3 -m venv venv
 ````
 
 4. Активировать окружение  
