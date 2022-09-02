@@ -37,5 +37,7 @@ source venv/bin/activate
 ````
 pip install -r requirements.txt 
 ````
+***
 Запуск 
 pars_csv.py 
+***
