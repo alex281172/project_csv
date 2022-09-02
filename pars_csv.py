@@ -1,7 +1,6 @@
 import pymorphy2
 import pandas as pd
 import nltk
-
 nltk.download('punkt')
 nltk.download('names')
 
@@ -11,13 +10,17 @@ morph = pymorphy2.MorphAnalyzer()
 csv_main = pd.read_csv("test_data.csv", delimiter=',')
 csv_man = csv_main[csv_main.role.str.contains(pat='manager', case=False)]
 
-print('*' * 50)
+def lines():
+    print('*' * 50)
+
+
+lines()
 print("\033[32m" 'Задание a: Извлекать реплики с приветствием – где менеджер поздоровался.' "\033[0m")
 print(csv_man[csv_man.text.str.contains(pat='здравствуйте|добрый день', case=False)])
-print('*' * 50)
+lines()
 print("\033[32m" 'Задание b: Извлекать реплики, где менеджер представил себя.'"\033[0m")
 print(csv_man[csv_man.text.str.contains(pat='меня зовут|меня|мое имя', case=False)])
-print('*' * 50)
+lines()
 print("\033[32m" 'Задание c: Извлекать имя менеджера.'"\033[0m")
 csv_man_hi = csv_man[csv_man.text.str.contains(pat='меня зовут|меня|мое имя|это|звонит|говорит', case=False)]
 for text in csv_man_hi.text:
@@ -25,19 +28,19 @@ for text in csv_man_hi.text:
     for word in nltk.word_tokenize(text):
         for p in morph.parse(word):
             if 'Name' in p.tag and p.score >= prob_thresh:
-                print(f'{word}')
+                print(f'{word} {p.score} {p.tag}')
                 name_man = word
                 # print(csv_man[csv_man.text.str.contains(pat=name_man, case=False)])
                 print(text)
 
-print('*' * 50)
+lines()
 print("\033[32m" 'Задание d: Извлекать название компании.'"\033[0m")
 print(csv_man[csv_man.text.str.contains(pat='диджитал', case=False)])
-print('*' * 50)
+lines()
 print("\033[32m" 'Задание e: Извлекать реплики, где менеджер попрощался.'"\033[0m")
 print(csv_man[csv_man.text.str.contains(pat='свидания|всего доброго', case=False)])
 
-print('*' * 50)
+lines()
 print("\033[32m" 'Задание f: Проверять требование к менеджеру: «В каждом диалоге обязательно необходимо поздороваться '
       'и попрощаться с клиентом».'"\033[0m")
 
