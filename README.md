@@ -16,8 +16,8 @@ python -m venv venvдля - для Windows
 python3 -m venv venv - для Linux
 
 4. Активировать окружение  
-.\\scripts\activate  
-venv\Scripts\activate.bat - для Windows  
+
+venv\scripts\activate.bat - для Windows  
 source venv/bin/activate - для Linux  
 
 5. Установить зависимости  
