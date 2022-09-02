@@ -1,7 +1,10 @@
 import pymorphy2
 import pandas as pd
 import nltk
-#nltk.download()
+
+nltk.download('punkt')
+nltk.download('names')
+
 prob_thresh = 0.4
 morph = pymorphy2.MorphAnalyzer()
 
